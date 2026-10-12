@@ -15,3 +15,12 @@ menuBtn.addEventListener('click', () => {
         menuIcon.classList.add('fa-bars');  // Wapas 3 lines
     }
 });
+const quizSection = document.getElementById('quizSection');
+const observer =  new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show-on-scroll');
+        }
+    });
+},{ threshold: 0.3});
+observer.observe(quizSection);

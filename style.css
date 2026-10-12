@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
 :root {
     --bg-color:#000000;
     --neon-green: #39ff14;
@@ -11,8 +13,19 @@
     font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
+    background: radial-gradient( ellipse at 75% 20%, rgba(0, 255, 65, 0.12)
+    0%, transparent 35%), radial-gradient( ellipse at 15% 85%, rgba(0, 100, 45, 0.14) 0%,
+    transparent 40%), linear-gradient( 125deg, #020403 0%, #06140B 35%, #092515 65%, #010302 100%);
+    background-color: #020403;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    inset:0;
+    pointer-events:none;
+    background: linear-gradient( 115deg, transparent 40%, rgba(57,255,20,0.035) 50%,
+    transparent 60%);
+    z-index: -1;
 }
 .navbar{
     height: 70px;
@@ -66,6 +79,7 @@ body {
     margin-top:20px;
     margin-left:20px;
     line-height:1.1;
+    color: var(--text-main);
 }
 .hero-headings h1{
     font-size: 60px;
@@ -91,6 +105,7 @@ body {
     transition: 0.3s ease;
     gap:180px;
     margin-top:100px;
+    color:var(--text-main);
 }
 .game-icon i{
     font-size:22px;
@@ -102,6 +117,28 @@ body {
 }
 .game-icon:hover i{
     transform: rotate(-12deg) scale(1.15);
+}
+.main-image{
+    repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+}
+.talent-text{
+    color:var(--neon-green);
+    text-align:center;
+    font-size:50px;
+}
+.character{
+    color:var(--text-main);
+    text-align:center;
+    font-size:50px;
+}
+.side-image{
+    color:var(--text-main);
+    text-align:center;
+    font-size:50px;
+
 }
 .explore-icon{
     cursor:pointer;
@@ -190,4 +227,282 @@ body {
         text-shadow: 0 0 15px var(--neon-green);
         transform: scale(1.1);
     }
+}
+.second-page-text{
+    color:var(--neon-green);
+    margin-left:20px;
+}
+.below-text{
+    margin-left:20px;
+    font-size:17px;
+    color:var(--text-muted);
+
+}
+.legend-text{
+    margin-left:20px;
+    font-size:18px;
+    margin-top:20px;
+    color: var(--text-main);
+}
+.explore-icon{
+    margin-left:20px;
+    margin-top:20px;
+    text-align:center;
+    text-decoration:none;
+    border: 1px solid var(--neon-green);
+    border-radius:10px
+}
+.legends-card{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    width: min(1100px, 90%);
+    margin: 40px auto 0;
+    height:350px;
+}
+.card1{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:0 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius:16px;
+    padding:30px;
+    color:#ffffff;
+    min-height:100%;
+    height:auto;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+.side-image{
+    margin-top:40px;
+    margin-left:20px;
+}
+/*3rd section start from here */
+.quiz-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'space Grotesk', sans-serif;
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(40px) scale(0.95);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.quiz-section.show-on-scroll {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+}
+.quiz-header h2 {
+    color: var(--neon-green);
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    font-weight: 700;
+}
+.quiz-card {
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(57, 255, 20, 0.05);
+    backdrop-filter: blur(10px);
+}
+.question-box {
+    margin-bottom: 30px;
+    min-height: 60px;
+}
+.question-box h3 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight:600
+}
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.option-btn {
+    background: transparent;
+    color: #ddd;
+    border: 1px solid #333;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.option-btn:hover {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+    color: #fff;
+    padding-left: 32px;
+}
+.quiz-footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80px;
+}
+.troll-box {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+.troll-box.show {
+    opacity: 1;
+}
+.next-btn {
+    margin-top: 15px;
+    background: var(--neon-green);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.next-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--neon-green);
+}
+.hidden {
+    display: none;
+}
+.wrong-choice {
+    border-color: #ff3333 !important;
+    color: #ff3333 !important;
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.4) !important;
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+.right-choice {
+    background-color: rgba(57, 255, 20, 0.1);
+    border-color: var(--neon-green) !important;
+    color: var(--neon-green) !important;
+    box-shadow: 0 0 20px; rgba(27, 255, 20, 0.5) !impostant;
+}
+@keyframes shake {
+    10%, 90% { transform: translate3d(-2px, 0, 0); }
+    20%, 80% { transform: translate3d(4px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-8px, 0, 0); }
+    40%, 60% { transform: translate3d(8px, 0, 0); } 
+}
+.voltenfacts{
+    margin-top:40px;
+    margin-left:20px;
+    font-size:15px;
+    color: var(--text-muted);
+}
+.thegame{
+    margin-left:20px;
+    color: var(--text-main);
+    font-size:25px;
+}
+.secrets{
+    margin-left:20px;
+    color:var(--neon-green);
+    font-size:25px;
+    line-height:0.8;
+}
+.para{
+    margin-left:20px;
+    margin-top:10px;
+    color:var(--text-muted);
+}
+.curious{
+    margin-left:20px;
+    margin-top:30px;
+    color:var(--text-muted);
+    font-size:15px;
+}
+.did-you{
+    margin-left:20px;
+    color:var(--text-main);
+    font-size:25px;
+}
+.glass-cards{
+    display:grid;
+    grid-template-columns:repeat(1fr);
+    gap:30px;
+    width: min(1100px, 90%);
+    margin: 40px auto 0;
+    height:auto;
+    margin-bottom:30px;
+}
+.facts-card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:0 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius:16px;
+    padding:30px;
+    color:#ffffff;
+    min-height:100%;
+    height:auto;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+.stay{
+    margin-left:20px;
+    margin-top:30px;
+    color:rgb(109, 42, 109)
+}
+.lets-keep{
+    margin-left:20px;
+    font-size:30px;
+    color:var(--text-main);
+}
+.exploring{
+    margin-left:20px;
+    font-size:30px;
+    color:var(--neon-green);
+    line-height:1;
+    margin-bottom:20px;
+}
+.last-card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:0 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius:16px;
+    padding:30px;
+    color:#ffffff;
+    min-height:100%;
+    height:auto;
+    width:100%;
+    display:flex;
+    gap:120px;
+    margin-bottom:20px;
+}
+.last-part{
+    margin-left:20px;
+    font-size:20px;
+    margin-top:20px;
+    color:var(--text-main);
+    display:flex;
+     gap:50px;
+     margin-bottom:50px;
 }
