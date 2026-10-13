@@ -30,28 +30,62 @@
         </div>
 </div>
 <!--Hero section code-->
+    
 <div class="hero-section">
-    <div class="hero-section-text">
-    <p>More Than a Game-----</p>
+    
+    <!-- 1. Left Top: Text Content -->
+    <div class="hero-text-area">
+        <div class="hero-section-text">
+            <p>More Than a Game-----</p>
+        </div>
+        <div class="hero-headings">
+            <h1>PLAY.</h1>
+            <h1>RALLY.</h1>
+            <h1>REPEAT.</h1>
+        </div>
+        <div class="paragraph">
+            <p>Step onto the court, challenge yourself, play real-time<br> matches
+            and experience tennis like never before with VOLTEN.</p>
+        </div>
     </div>
-    <div class="hero-headings">
-    <h1>PLAY.</h1>
-    <H1>RALLY.</H1>
-    <H1>REPEAT.</H1>
+
+    <!-- 2. Right Side (Desktop) / Middle (Mobile): Interactive Game Card -->
+    <div class="interactive-game-area" id="gameArea">
+        <div class="game-intro-card" id="gameIntro">
+            <h2>TAP THE BALL TO PLAY</h2>
+            <canvas id="idleCanvas" width="400" height="220"></canvas>
+        </div>
+        
+        <!-- FULL SCREEN GAME (Hidden initially) -->
+        <div class="full-game-container" id="fullGameContainer" style="display: none;">
+            <div class="back-btn" onclick="exitGame()">&#10094;</div>
+            <div class="score-board">
+                <span id="playerScore">0</span> - <span id="botScore">0</span>
+            </div>
+            <canvas id="activeGameCanvas" width="800" height="500"></canvas>
+            
+            <div id="gameOverModal" class="game-over-modal" style="display: none;">
+                <h2 id="winnerText">GAME OVER</h2>
+                <div class="modal-buttons">
+                    <button class="modal-btn restart-btn" onclick="startGame()">RESTART GAME</button>
+                    <button class="modal-btn exit-modal-btn" onclick="exitGame()">EXIT GAME</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="paragraph">
-    <p>Step onto the court, challenge yourself, play real-time<br> matches
-    and experience tennis like never before with VOLTEN.</p>
-    </div>
+
+    <!-- 3. Left Bottom (Desktop) / Bottom (Mobile): 4 Icons Card -->
     <div class="hero-bottom-box">
-        <div class="game-icon">
-        <i class="fa-solid fa-gamepad"></i>
+        <div class="game-icon-card">
+            <i class="fa-solid fa-gamepad"></i>
             <i class="fa-solid fa-magnifying-glass-chart"></i>
             <i class="fa-solid fa-ranking-star"></i>
             <i class="fa-solid fa-table-list"></i>
-            </div>
+        </div>
     </div>
+
 </div>
+<!--game section ends here-->
 <hr>
 <!--Second page code-->
 <div class="second-page">
@@ -59,8 +93,8 @@
       <p>THE LEGENDS....</p>
       </div>
     <div class="second-page-text">
-        <h1>Novak Djokovic</h1>
-        </div>
+        <h1>NOVAK DJOKOVIC</h1>
+    </div>
     <div class="main-image">
         <img src="Novak dj.avif" alt="novak-image" height="200px">
     </div>  
@@ -69,12 +103,14 @@
     </div>
 <div class="legend-text">
     <p> Novak Djokovic isn't just a tennis player. He's a symbol <br>of resilience
-    ,passion and unbreakable spirit. A true<br>
-legend of the game.</p>
+        ,passion and unbreakable spirit. A true<br>
+         legend of the game.</p>
 </div>
+<!-- Cleaned up button -->
 <div class="explore-icon">
-   <a href="#" target="_blank" rel="noopener noreferrer">EXPLORE MORE</a>
+   <a href="#" target="_blank" rel="noopener noreferrer">EXPLORE MORE
     <i class="fa-solid fa-circle-chevron-right"></i>
+   </a>
     </div>
 </div>
 <hr>
@@ -82,7 +118,7 @@ legend of the game.</p>
 <div class="third-page">
     <div class="legends-card">
         <div class="card1">
-            <a href="https://science.nasa.gov/asset/hubble/illustration-of-an-isolated-black-hole/"
+            <a href="roger.html"
    target="_blank"
    rel="noopener noreferrer">
    <img src="Roger.webp" alt="roger image" height="250px" width="300px">
@@ -91,7 +127,7 @@ legend of the game.</p>
    <p>SWITZERLAND</p>
         </div>
          <div class="card1">
-            <a href="https://science.nasa.gov/asset/hubble/illustration-of-an-isolated-black-hole/"
+            <a href="novak.html"
    target="_blank"
    rel="noopener noreferrer">
    <img src="novak.webp" alt="novak image" height="250px">
@@ -100,7 +136,7 @@ legend of the game.</p>
    <p>SERBIA</p>
         </div>
          <div class="card1">
-            <a href="https://science.nasa.gov/asset/hubble/illustration-of-an-isolated-black-hole/"
+            <a href="rafael.html"
    target="_blank"
    rel="noopener noreferrer">
    <img src="rafael.avif" alt="rafael image" height="250px">
@@ -109,7 +145,7 @@ legend of the game.</p>
    <p>SPAIN</p>
         </div>
          <div class="card1">
-            <a href="https://science.nasa.gov/asset/hubble/illustration-of-an-isolated-black-hole/"
+            <a href="serena.html"
    target="_blank"
    rel="noopener noreferrer">
    <img src="serena.webp" alt="serena image" height="250px">
@@ -155,6 +191,8 @@ legend of the game.</p>
         </div>
     </div>
 </div>
+<!--Quiz section ends here-->
+
 <hr>
 <!-- Code for fifth page -->
 <div class="fifthpage">
