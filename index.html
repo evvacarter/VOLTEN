@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VOLTEN - more then game ... </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
    <div class="navbar">
@@ -14,19 +15,35 @@
         <p>Home</p>
         <p>GAME</p>
         <p>Iconic players</p>
-        <p>Play Now</p>
+    </div>
+        <!--slider code is here guys -->
+         <div class="nav-right-controls" style="display: flex; align-items: center; gap: 15px;">
+        <label class="theme-switch" for="switch-desktop">
+            <input type="checkbox" id="switch-desktop" class="theme-checkbox">
+            <div class="slider round">
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <i class="fa-solid fa-moon icon-moon"></i>
+            </div>
+        </label>
     </div>
  
     <div class="mobile-menu-btn" id="menuBtn">
         <i class="fa-solid fa-bars" id="menuIcon"></i>
     </div>
+  </div>
 </div>
 <div class="mobile-overlay" id="mobileOverlay">
         <div class="overlay-links">
             <p>HOME</p>
             <p>GAME</p>
             <p>Iconic players</p>
-            <p>Play Now</p>
+            <label class="theme-switch" for="switch-mobile">
+                <input type="checkbox" id="switch-mobile" class="theme-checkbox">
+                <div class="slider round">
+                    <i class="fa-solid fa-sun icon-sun"></i>
+                    <i class="fa-solid fa-moon icon-moon"></i>
+                </div>
+            </label>
         </div>
 </div>
 <!--Hero section code-->
@@ -85,7 +102,6 @@
     </div>
 
 </div>
-<!--game section ends here-->
 <hr>
 <!--Second page code-->
 <div class="second-page">
@@ -116,78 +132,132 @@
 <hr>
 <!-- third page code-->
 <div class="third-page">
-    <div class="legends-card">
-        <div class="card1">
-            <a href="roger.html"
-   target="_blank"
-   rel="noopener noreferrer">
-   <img src="Roger.webp" alt="roger image" height="250px" width="300px">
-   </a>
-   <h2>Roger Federer</h2>
-   <p>SWITZERLAND</p>
-        </div>
-         <div class="card1">
-            <a href="novak.html"
-   target="_blank"
-   rel="noopener noreferrer">
-   <img src="novak.webp" alt="novak image" height="250px">
-   </a>
-   <h2>Novak Djokovic</h2>
-   <p>SERBIA</p>
-        </div>
-         <div class="card1">
-            <a href="rafael.html"
-   target="_blank"
-   rel="noopener noreferrer">
-   <img src="rafael.avif" alt="rafael image" height="250px">
-   </a>
-   <h2>Rafael Nadal</h2>
-   <p>SPAIN</p>
-        </div>
-         <div class="card1">
-            <a href="serena.html"
-   target="_blank"
-   rel="noopener noreferrer">
-   <img src="serena.webp" alt="serena image" height="250px">
-   </a>
-   <h2>Serena Williams</h2>
-   <p>USA</p>
+    
+    <!-- Swiper Main Container (Purane legends-card ki jagah) -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="card1">
+                    <a href="roger.html" target="_blank" rel="noopener noreferrer">
+                        <img src="Roger.webp" alt="roger image" height="250px" width="300px">
+                    </a>
+                    <h2>Roger Federer</h2>
+                    <p>SWITZERLAND</p>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="card1">
+                    <a href="novak.html" target="_blank" rel="noopener noreferrer">
+                        <img src="novak.webp" alt="novak image" height="250px">
+                    </a>
+                    <h2>Novak Djokovic</h2>
+                    <p>SERBIA</p>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="card1">
+                    <a href="rafael.html" target="_blank" rel="noopener noreferrer">
+                        <img src="rafael.avif" alt="rafael image" height="250px">
+                    </a>
+                    <h2>Rafael Nadal</h2>
+                    <p>SPAIN</p>
+                </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <div class="card1">
+                    <a href="serena.html" target="_blank" rel="noopener noreferrer">
+                        <img src="serena.webp" alt="serena image" height="250px">
+                    </a>
+                    <h2>Serena Williams</h2>
+                    <p>USA</p>
+                </div>
+            </div>
+            <!--slider ko countinuous chlane ke liye cards ko double karna padegs its important -->
+            <div class="swiper-slide">
+                <div class="card1">
+                    <a href="roger.html" target="_blank" rel="noopener noreferrer">
+                        <img src="Roger.webp" alt="roger image" height="250px" width="300px">
+                    </a>
+                    <h2>Roger Federer</h2>
+                    <p>SWITZERLAND</p>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="card1">
+                    <a href="novak.html" target="_blank" rel="noopener noreferrer">
+                        <img src="novak.webp" alt="novak image" height="250px">
+                    </a>
+                    <h2>Novak Djokovic</h2>
+                    <p>SERBIA</p>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="card1">
+                    <a href="rafael.html" target="_blank" rel="noopener noreferrer">
+                        <img src="rafael.avif" alt="rafael image" height="250px">
+                    </a>
+                    <h2>Rafael Nadal</h2>
+                    <p>SPAIN</p>
+                </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <div class="card1">
+                    <a href="serena.html" target="_blank" rel="noopener noreferrer">
+                        <img src="serena.webp" alt="serena image" height="250px">
+                    </a>
+                    <h2>Serena Williams</h2>
+                    <p>USA</p>
+                </div>
+            </div>
         </div>
     </div>
-<div class="talent-text">
-    <h3> TALENT BUILDS<BR>
-        PLAYERS.
-    </h3>
+
+    <!-- Ye neeche ka section bilkul untouched rahega -->
+    <div class="talent-text">
+        <h3> TALENT BUILDS<br>PLAYERS.</h3>
     </div>
-        <div class="character">
-        <H3>CHARACTER BUILDS<BR>
-            LEGENDS.
-        </H3>
-        </div>
-        <div class="side-image">
-        <img src="novak.webp" alt="novak" height="500px" width="700px">
-</div>
+    
+    <div class="character">
+        <h3>CHARACTER BUILDS<br>LEGENDS.</h3>
+    </div>
+    
+    <div class="side-image">
+        <img src="novak.webp" alt="novak" >
+    </div>
+    
 </div>
 <!--quiz section start from here -->
-<div class="quiz-section" id="quizSection">
+ <div class="quiz-section" id="quizSection">
     <div class="quiz-header">
-        <h2>Check your intrest in tennis</h2>
+        <h2>Check your tennis IQ</h2>
     </div>
+    
     <div class="quiz-card">
-        <!--question box is here -->
+        <!-- JS automatically yahan question text daalega -->
         <div class="question-box">
-            <h3 id="question-text" class="typewriter">Q1. what does "LOVE" mean in tennis?</h3> 
+            <h3></h3> 
         </div>
-        <div class="options-grid" id="optionsGrid">
-            <button class="option-btn" onclick="checkAnswer(this, 1)">A. Finding your soulmate on the court</button>
-            <button class="option-btn" onclick="checkAnswer(this, 2)">B. Absolute Zero (0) score</button>
-            <button class="option-btn" onclick="checkAnswer(this, 3)">C. Hugging the umpire</button>
-            <button class="option-btn" onclick="checkAnswer(this, 4)">D. Swiping right on Tinder</button>
-        </div>
+        
+        <!-- JS automatically yahan 4 naye buttons banayega -->
+        <div class="options-grid"></div>
+        
         <div class="quiz-footer">
-            <div id="troll-message" class="troll-box">
-                <button id="next-btn" class="next-btn hidden" onclick="loadnextQuestion()">Next Question >></button>
-            </div>
+            <!-- JS troll message aur colors yahan control karega -->
+            <div class="troll-box"></div>
         </div>
     </div>
 </div>
@@ -292,6 +362,7 @@ mind blowing records that makes this game even more incredible.</P>
     </div>
 </div>
 </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

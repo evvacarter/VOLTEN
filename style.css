@@ -1,43 +1,169 @@
+/* 
+   1. ROOT VARIABLES & GLOBAL RESET
+ */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
 
+[data-theme="light"] {
+    --bg-color: #FFFFFF; 
+    --text-main: #121614; 
+    
+    --text-muted: #3B5942; 
+    
+    --neon-green: #00C82B;  
+    --neon-red: #E60045;  
+}
+
+/* 2. GLOBAL BODY & BACKGROUND */
+body[data-theme="light"]  {
+    /* Smooth white-to-green gradient mixing */
+    background: radial-gradient(ellipse at 75% 20%, rgba(57, 255, 20, 0.08) 0%, transparent 40%),
+                radial-gradient(ellipse at 15% 85%, rgba(0, 100, 45, 0.1) 0%, transparent 50%),
+                linear-gradient(135deg, #FFFFFF 0%, #F5FBF6 40%, #EAF5EB 70%, #FFFFFF 100%) !important;
+    background-color: var(--bg-color) !important;
+}
+
+ 
+[data-theme="light"] .hero-section {
+    background: transparent !important;  
+}
+[data-theme="light"] .hero-section-text p {
+    color: var(--neon-green); 
+    font-weight: bold;
+    text-shadow: none;
+}
+[data-theme="light"] .hero-headings h1 {
+    color: var(--text-main); 
+    text-shadow: none; 
+}
+[data-theme="light"] .hero-headings h1:nth-child(2) {
+    color: var(--neon-green); 
+}
+[data-theme="light"] .paragraph p {
+    color: var(--text-main); 
+}
+[data-theme="light"] .game-icon-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 200, 43, 0.3);
+}
+[data-theme="light"] .game-icon-card i {
+    color: var(--text-main);
+}
+[data-theme="light"] .game-icon-card i:hover {
+    color: var(--neon-green);
+}
+
+/* 4. SECTIONS BACKGROUND   */
+[data-theme="light"] .second-page,
+[data-theme="light"] .third-page {
+    background-color: #F8FDF9 !important; 
+    background-image: 
+        linear-gradient(rgba(0, 200, 43, 0.07) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(0, 200, 43, 0.07) 1.5px, transparent 1.5px);
+    background-size: 55px 55px !important; /* Box pattern */
+}
+
+/* 5. NAVBAR STYLING */
+[data-theme="light"] .navbar {
+    background: linear-gradient(135deg, rgba(16, 229, 59, 0.85) 0%, rgba(0, 200, 43, 0.9) 50%, rgba(2, 90, 18, 0.95) 100%) !important;
+    backdrop-filter: blur(12px) !important; /* Sheeshe jaisa blur effect */
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(0, 200, 43, 0.4) !important;
+}
+body[data-theme="light"] .navbar h1 {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+body[data-theme="light"] .navbaricons p {
+    color: #F4FFF5 !important; 
+}
+[data-theme="light"] .navbaricons p:hover {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
+    transform: scale(1.1); 
+    transition: 0.3s ease;
+}
+
+/* 6. GLASSMORPHISM CARDS   */
+[data-theme="light"] .card1,
+[data-theme="light"] .facts-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid rgba(0, 200, 43, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 100, 20, 0.08);
+    color: var(--text-main);
+}
+
+/* 7. SLIDER / SWIPER   */
+[data-theme="light"] .swiper-slide {
+    filter: blur(4px) brightness(0.85);  
+}
+[data-theme="light"] .swiper-slide.swiper-slide-active {
+    filter: blur(0px) brightness(1.05);  
+    box-shadow: 0 10px 30px rgba(0, 200, 43, 0.15);
+}
+
+/* 8. INTERACTIVE BUTTONS & QUIZ CARDS */
+[data-theme="light"] .option-btn {
+    background: #FFFFFF;
+    color: var(--text-main);
+    border: 2px solid #D5EBD7;
+}
+[data-theme="light"] .option-btn:hover {
+    border-color: var(--neon-green);
+    background: #F4FDF5;
+    box-shadow: 0 0 12px rgba(0, 200, 43, 0.15);
+}
+[data-theme="light"] .quiz-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(0, 200, 43, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 100, 20, 0.08);
+}
+
+/* 9. IMAGES & VISUAL ALIGNMENTS */
+[data-theme="light"] .side-image img {
+    border: 2.5px solid var(--neon-green);
+    box-shadow: 0 12px 35px rgba(0, 80, 15, 0.12);
+}
 :root {
-    --bg-color:#000000;
+    --bg-color: #000000;
     --neon-green: #39ff14;
     --text-main: #ffffff;
     --text-muted: #aaaaaa;
+    --neon-red: #ff3333; /* Modal aur buttons ke liye add kiya */
 }
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/*  2. BODY & BACKGROUND ANIMATIONS */
 body {
-    background: radial-gradient( ellipse at 75% 20%, rgba(0, 255, 65, 0.12)
-    0%, transparent 35%), radial-gradient( ellipse at 15% 85%, rgba(0, 100, 45, 0.14) 0%,
-    transparent 40%), linear-gradient( 125deg, #020403 0%, #06140B 35%, #092515 65%, #010302 100%);
+    background: radial-gradient(ellipse at 75% 20%, rgba(0, 255, 65, 0.12) 0%, transparent 35%),
+                radial-gradient(ellipse at 15% 85%, rgba(0, 100, 45, 0.14) 0%, transparent 40%),
+                linear-gradient(125deg, #020403 0%, #06140B 35%, #092515 65%, #010302 100%);
     background-color: #020403;
+    overflow-x: hidden;  
 }
-.hero::before{
-    content: "";
-    position: absolute;
-    inset:0;
-    pointer-events:none;
-    background: linear-gradient( 115deg, transparent 40%, rgba(57,255,20,0.035) 50%,
-    transparent 60%);
-    z-index: -1;
+
+/*   3. NAVIGATION BAR  */
+.navbar {
+     height: 65px !important;  
+    width: 90% !important;
+    margin: 0 auto !important;  
+    border-radius: 50px !important; 
+    position: sticky !important;
+    top: 20px !important; 
+    z-index: 9999 !important;  
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 40px !important;
 }
-.navbar{
-    height: 90px;
-    width:100%;
-    border-bottom: 1px solid rgba(57, 255, 20, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    box-shadow: 0 4px 15px rgba(57, 255, 20, 0.5);
-    background-color: var(--bg-color);
-}
+
 .navbar h1 {
     color: var(--neon-green);
     text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
@@ -46,38 +172,191 @@ body {
     line-height: normal;
     display: flex;
     align-items: center;
+    font-family: 'Audiowide', cursive !important;
+    font-size: 32px !important; 
+    letter-spacing: 3px !important;
+    margin-right: auto !important;
 }
-.navbaricons{
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
+
+.navbaricons {
+    display: flex;
+    align-items: center;
     gap: 30px;
+    margin-right: 25px;
 }
-.mobile-menu-btn {
-    display: none;
-}
-.mobile-overlay {
-    display: none;
-}
+
+/* BUG FIX: nabvaricons P -> navbaricons p */
 .navbaricons p {
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 14px;
+    color: var(--text-main);
     transition: 0.3s ease;
+    font-family: 'Caveat', cursive !important;
+    font-size: 24px !important; /* Cursive me thoda bada size achha lagta hai */
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
 }
-.nabvaricons P:hover {
+
+.navbaricons p:hover {
     color: var(--neon-green);
     text-shadow: 0 0 8px var(--neon-green);
 }
+
+/* 4. MOBILE OVERLAY MENU */
+.mobile-menu-btn {
+    display: none; /* Desktop par hide rahega */
+    align-items: center;
+    position: relative;
+    color: var(--neon-green);
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mobile-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-links {
+    font-size: 30px;
+    color: white;
+    margin: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.overlay-links p:hover {
+    color: var(--neon-green);
+    text-shadow: 0 0 15px var(--neon-green);
+    transform: scale(1.1);
+}
+
+/* theme toggle button code is here guys */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 32px;
+    margin-left: 15px;
+}
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #121614;
+    transition: 0.4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    border: 2px solid rgba(57, 255, 20, 0.5);
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+input:checked + .slider {
+    background-color: #00C82B; /* Light mode me green ho jayega */
+    border-color: #00C82B;
+}
+
+input:checked + .slider:before {
+    transform: translateX(32px); /* Pahiya right me slide hoga */
+}
+
+/* Switch ke andar ke icons */
+.icon-sun { color: #fff; font-size: 14px; z-index: 1; }
+.icon-moon { color: #f1c40f; font-size: 14px; z-index: 1; }
+
+
+/* =========================================
+   100% BULLETPROOF LIGHT THEME TEXT FIX
+========================================= */
+/* Agar koi bhi text default white set hai, toh light mode me wo dark ho jayega */
+[data-theme="light"] .third-page p,
+[data-theme="light"] .third-page h2,
+[data-theme="light"] .facts-section p,
+[data-theme="light"] .facts-section h3,
+[data-theme="light"] .facts-section h2,
+[data-theme="light"] .quiz-section h3,
+[data-theme="light"] .quiz-section p,
+[data-theme="light"] .card1 p,
+[data-theme="light"] .card1 h2 {
+    color: #121614 !important; /* Pure dark charcoal for readability */
+}
+
+/* Specific items jo hamesha green rehne chahiye */
+[data-theme="light"] .talent-text h3,
+[data-theme="light"] .quiz-header h2 {
+    color: var(--neon-green) !important;
+}
+
+/* Navbar aur footer ka text light mode me bhi bright rakhne ke liye (kyunki wo green/dark hain) */
+[data-theme="light"] .navbaricons p {
+    color: #FFFFFF !important;
+}
+
+/*  
+   5. HERO SECTION (Layout & Text Area)
+  */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 40%, rgba(57, 255, 20, 0.035) 50%, transparent 60%);
+    z-index: -1;
+}
+
 .hero-section {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    grid-template-areas: "text game" "icons game";
-    align-items:center;
+    grid-template-areas: 
+        "text game" 
+        "icons game";
+    align-items: center;
     gap: 30px 50px;
     padding: 50px 6%;
-    min-height: calc(100vh-70px);
+    min-height: calc(100vh - 90px);
     max-width: 1400px;
     margin: 0 auto;
     opacity: 0;
@@ -86,33 +365,32 @@ body {
     transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Jab JS ye class add karega tab effect aayega */
 .hero-section.show-on-scroll {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0) scale(1);
 }
-.hero-section.show-on-scroll {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0) scale(1);
-}
+
 .hero-text-area {
     grid-area: text;
 }
-.hero-section-text p{
+
+/* BUG FIX: var(--ne0n-green) ko theek kiya */
+.hero-section-text p {
     font-size: clamp(16px, 1.5vw, 20px);
-    color: var(--ne0n-green);
+    color: var(--neon-green);
     letter-spacing: 1.5px;
     margin-bottom: 15px;
     font-weight: 600;
 }
+
 .hero-headings {
-    margin-top:20px;
-    margin-left:20px;
-    line-height:1.1;
+    margin-top: 20px;
+    margin-left: 20px;
+    line-height: 1.1;
     color: var(--text-main);
 }
+
 .hero-headings h1 {
     font-size: clamp(42px, 5.5vw, 72px);
     font-weight: 900;
@@ -120,89 +398,286 @@ body {
     color: var(--text-main);
     letter-spacing: 1px;
 }
-.paragraph{
-    margin-top:20px;
+
+.paragraph {
+    margin-top: 20px;
     font-size: clamp(15px, 1.2vw, 18px);
     color: var(--text-muted);
     line-height: 1.6;
 }
+
 .hero-bottom-box {
+    grid-area: icons;
     margin-top: 50px;
-} 
-.game-icon{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
-    cursor:pointer;
+}
+
+.game-icon {
+    width: fit-content; /* Pehle 55px tha jo layout bigad raha tha */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 35px; /* Pehle 180px gap tha jo mobile me bahar jaata tha */
+    margin-top: 40px;
+    color: var(--text-main);
+}
+
+.game-icon i {
+    font-size: 26px;
+    cursor: pointer;
     transition: 0.3s ease;
-    gap:180px;
-    margin-top:100px;
-    color:var(--text-main);
+    padding: 10px;
+    border-radius: 50%;
 }
-.game-icon i{
-    font-size:22px;
-    transition: 0.3s ease;
+
+.game-icon:hover i {
+    color: var(--bg-color);
+    background-color: var(--neon-green);
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 0 20px var(--neon-green);
 }
-.game-icon:hover{
-    transform: translateY(-6px) scale(1.08);
-    box-shadow: 0 0 20px rgba(255,255,255,0.35);
-}
-.game-icon:hover i{
-    transform: rotate(-12deg) scale(1.15);
-}
-.main-image{
-    grid-area: image;
-    position: relative;
-    z-index: 2;
+/* =========================================
+   6. HERO INTERACTIVE GAME AREA (Right Side)
+========================================= */
+.interactive-game-area {
+    grid-area: game;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 500px;
-    justify-self: center;
 }
-/* 1. White Grid Lines (Behind the image) */
-.main-image::before {
-    display: none;
+
+.game-intro-card {
+    background: rgba(12, 12, 12, 0.85);
+    border: 1px solid rgba(57, 255, 20, 0.35);
+    border-radius: 20px;
+    padding: clamp(20px, 3vw, 35px);
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(57, 255, 20, 0.12);
+    backdrop-filter: blur(12px);
+    transition: all 0.35s ease;
 }
-/* 2. Neon Glow Effect (Far behind) */
-.main-image::after {
-     width: 100%;
-     height: auto;
-     object-fit: cover;
-     display: block;
-     border: 2px solid rgba(255, 255, 255, 0.4);
-     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+
+/* BUG FIX: hover properties merged */
+.game-intro-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--neon-green);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.9), 0 0 35px rgba(57, 255, 20, 0.3);
 }
-/* The actual image - NO BORDER RADIUS (SHARP) */
+
+/* BUG FIX: --neon-grreen typo fixed */
+.game-intro-card h2 {
+    color: var(--neon-green);
+    font-size: clamp(16px, 1.8vw, 22px);
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+#idleCanvas {
+    width: 100%;
+    height: auto;
+    background: #050505;
+    /* BUG FIX: 27 to 57 for neon green */
+    border: 2px dashed rgba(57, 255, 20, 0.4); 
+    border-radius: 12px;
+    display: block;
+}
+
+/* --- HERO SECTION MOBILE RESPONSIVE --- */
 @media (max-width: 850px) {
-    .second-page {
+    .navbaricons { display: none; }
+    .mobile-menu-btn { display: flex; }
+    
+    .hero-section {
         grid-template-columns: 1fr;
-        grid-template-areas: "top" "name" "image" "sub" "desc" "btn";
-        text-align: left;
-        padding: 50px 25px;
-        gap: 20px;
+        grid-template-areas: 
+            "text" 
+            "game" 
+            "icons";
+        text-align: center;
+        gap: 35px;
+        padding: 30px 20px;
     }
-    .main-image {
-        margin: 20px auto;
+    
+    .game-intro-card {
+        max-width: 420px;
+        margin: 0 auto;
     }
 }
-.talent-text{
-    color:var(--neon-green);
-    text-align:center;
-    font-size:50px;
+
+/* 
+   7. FULLSCREEN ACTIVE GAME CONTAINER
+ */
+.full-game-container {
+    position: fixed !important; 
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    z-index: 99999 !important; /* Sabse aage */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background: rgba(5, 19, 8, 0.98) !important;
+    backdrop-filter: blur(15px);
 }
-.character{
-    color:var(--text-main);
-    text-align:center;
-    font-size:50px;
+
+.score-board {
+    position: absolute;
+    top: 20px;
+    font-size: 35px;
+    color: var(--neon-green);
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.8);
+    z-index: 10001;
 }
-.side-image{
-    color:var(--text-main);
-    text-align:center;
-    font-size:50px;
+
+#activeGameCanvas {
+    border: 2px solid var(--neon-green);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.2);
+    background-color: #050505;
+    cursor: none;
+    max-width: 100%;
 }
-/* --- BUTTON FIX ---*/
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--neon-red);
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10002;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    color: var(--text-main);
+    text-shadow: 0 0 15px var(--neon-red);
+    transform: scale(1.2);
+}
+
+/* GAME OVER MODAL */
+.game-over-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(5, 5, 5, 0.95);
+    border: 2px solid var(--neon-green);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(57, 255, 20, 0.3);
+    z-index: 10002;
+    backdrop-filter: blur(15px);
+}
+
+.game-over-modal h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 0 0 15px var(--neon-green);
+    letter-spacing: 2px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.modal-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid;
+    background: transparent;
+    letter-spacing: 1px;
+}
+
+.restart-btn {
+    color: var(--neon-green);
+    border-color: var(--neon-green);
+}
+
+.restart-btn:hover {
+    background: var(--neon-green);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+.exit-modal-btn {
+    color: var(--neon-red);
+    border-color: var(--neon-red);
+}
+
+.exit-modal-btn:hover {
+    background: var(--neon-red);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-red);
+}
+
+.hide-ui, .hidden-game {
+    display: none !important;
+}
+
+/* =========================================
+   8. THE LEGENDS SECTION (Second Page)
+========================================= */
+.second-page {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "top    image"
+        "name   image"
+        "sub    image"
+        "desc   image"
+        "btn    image";
+    gap: 15px 40px;
+    align-items: center;
+    padding: 80px 8%;
+    max-width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #050505;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.second-page::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: var(--neon-green);
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.top-text { grid-area: top; color: #fff; font-size: 14px; letter-spacing: 2px; z-index: 2;}
+.second-page-text { grid-area: name; color: var(--neon-green); font-size: clamp(35px, 4vw, 55px); margin: 0; z-index: 2; font-weight: 800; text-transform: uppercase;}
+.below-text { grid-area: sub; color: var(--text-muted); font-size: 18px; margin: 0; z-index: 2; letter-spacing: 1px;}
+.legend-text { grid-area: desc; color: var(--text-main); font-size: 18px; line-height: 1.6; margin: 0; z-index: 2; }
+
+/* BUG FIX: explore-btn aur explore-icon ki CSS merge karke ek clear button banaya */
 .explore-btn {
     grid-area: btn;
     position: relative;
@@ -222,176 +697,37 @@ body {
     background: #000;
     z-index: 2;
 }
+
 .explore-btn i {
     font-size: 20px;
     transition: 0.3s ease;
 }
+
 .explore-btn:hover {
     background: var(--neon-green);
     color: #000;
     box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
 }
+
 .explore-btn:hover i {
     transform: translateX(5px);
 }
-@media (max-width: 850px){
+
+/* --- THE LEGENDS MOBILE RESPONSIVE --- */
+@media (max-width: 850px) {
     .second-page {
         grid-template-columns: 1fr;
-        grid-template-areas: "top" "name" "sub" "desc" "image" "btn";
+        grid-template-areas: 
+            "top" 
+            "name" 
+            "image" 
+            "sub" 
+            "desc" 
+            "btn";
         text-align: left;
-        padding: 40px 20px;
+        padding: 50px 25px;
+        gap: 20px;
     }
-    .main-image {
-        margin: 30px auto 40px;
-    }
-}
-
-.explore-icon{
-    cursor:pointer;
-    transition: 0.3s ease;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
-}
-.explore-icon i{
-    transition: 0.3s ease;
-}
-.explore-icon:hover{
-    transform: scale(1.12);
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.7));
-}
-.explore-icon:hover i{
-    transform:rotate(-15deg);
-}
-@media (max-width: 768px) {
-    .navbaricons {
-        display: none;
-    }
-    .navbar {
-        height: 60px;
-        width: 90%;
-        margin: 15px auto;
-        border-radius: 50px;
-        border: 2px solid var(--neon-green);
-        background-color: var(--bg-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1000;
-        box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
-    }
-    .mobile-menu-btn {
-        display: flex;
-        align-items: center;
-        position:absolute;
-        right: 20px;
-        gap: 15px;
-        color: var(--neon-green);
-        font-size: 22px;
-        font-weight: bold;
-        cursor: pointer;
-        padding-right: 10px;
-    }
-    .mobile-overlay {
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.9);
-        backdrop-filter: blur(10px);
-        z-index: 999;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.4s ease, visibililty 0.4s ease;
-    }
-    .mobile-overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
-    .overlay-links {
-        font-size: 30px;
-        color: white;
-        margin: 25px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        cursor: pointer;
-        transition: 0.3s ease;
-        text-align: center;
-    }
-    .overlay-links p:hover {
-        color: var(--neon-green);
-        text-shadow: 0 0 15px var(--neon-green);
-        transform: scale(1.1);
-    }
-}
-/* ---SECOND PAGE CSS  START FROM HERE ---*/
-.second-page {
-     position: relative;
-    display: grid;
-    /* Desktop par 2 equal columns */
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "top    image"
-        "name   image"
-        "sub    image"
-        "desc   image"
-        "btn    image";
-    gap: 15px 40px;
-    align-items: center;
-    padding: 80px 8%;
-    max-width: 100%;
-    overflow: hidden;
-    z-index: 1;
-
-    /* Ye code POORE section mein peeche white grid banayega */
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-    background-size: 40px 40px; /* Box ka size */
-}
-.second-page::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 60%;
-    background: var(--neon-green);
-    filter: blur(120px);
-    opacity: 0.15;
-    z-index: -1;
-    pointer-events: none;
-}
-/* --- THE IMAGE EFFECT (SHARP, GLOW, WHITE GRID) --- */
-.top-text {
-    grid-area: top; color: #fff; font-size: 14px; letter-spacing: 2px; z-index: 2;
-}
-.second-page-text { 
-    grid-area: name; color: var(--neon-green); font-size: clamp(35px, 4vw, 55px); margin: 0; z-index: 2; font-weight: 800; text-transform: uppercase;
-}
-.below-text { 
-    grid-area: sub; color: var(--text-muted); font-size: 18px; margin: 0; z-index: 2; letter-spacing: 1px;
-}
-.legend-text { 
-    grid-area: desc; color: var(--text-main); font-size: 18px; line-height: 1.6; margin: 0; z-index: 2; 
-}
-.explore-icon{
-    margin-left:20px;
-    margin-top:20px;
-    text-align:center;
-    text-decoration:none;
-    border: 1px solid var(--neon-green);
-    border-radius:10px
 }
 .legends-card{
     display:grid;
@@ -401,43 +737,136 @@ body {
     margin: 40px auto 0;
     height:350px;
 }
-.card1{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-    border:1px solid rgba(255, 255, 255, 0.15);
-    box-shadow:0 4px 30px rgba(0, 0, 0, 0.3);
-    border-radius:16px;
-    padding:30px;
-    color:#ffffff;
-    min-height:100%;
-    height:auto;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
+/* =========================================
+   9. LEGENDS IMAGE FIX & CHARACTER CARDS
+========================================= */
+.swiper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px 0;
+    margin: 40px auto 0;
+    overflow: hidden;
 }
-.side-image{
-    margin-top:40px;
-    margin-left:20px;
+.swiper-wrapper {
+    transition-timing-function: linear !important;
 }
-/*3rd section start from here */
+/* har ek card ko width and setup guys */
+.swiper-slide {
+    width: 300px; /* Card ki motai */
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    
+    /* DEFAULT STATE (Side Cards): Blurred aur thode dark rahenge */
+    filter: blur(6px) brightness(0.5);
+    transition: filter 0.5s ease, transform 0.5s ease;
+    transition-timing-function: linear !important;
+}
+.swiper-slide.swiper-slide-active {
+    filter: blur(0px) brightness(1.2);
+    transform: scale(1.15);
+    z-index: 10;
+}
+.swiper-slide .card1,
+.swiper-slide .facts-card {
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 220px; /* Mobile par width kam ki taaki 3 cards (1 full, 2 half) dikh sakein */
+        height: 320px;
+    }
+}
+.main-image {
+    grid-area: image;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+}
+
+/* Yahan hai unequal images ka FIX */
+.main-image img {
+    width: 100%;
+    aspect-ratio: 4/5; /* Sabhi images ko ek uniform vertical box me set karega */
+    object-fit: cover; /* Image bina stretch hue box bhar legi */
+    object-position: top center; /* Face humesha focus me rahega */
+    display: block;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    /* Agar sharp corners chahiye to border-radius mat lagana */
+}
+
+.legends-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: min(1100px, 90%);
+    margin: 40px auto 0;
+    /* height: 350px; (Fixed height hata di taaki text badhne par overflow na ho) */
+}
+
+/* Glassmorphism Card (Used for Legends & Facts) */
+.card1, .facts-card {
+    background: rgba(255, 255, 255, 0.03) !important; /* Ekdum halka transparent white */
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Halka sa chamakta border */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important; /* Soft shadow */
+    border-radius: 16px;
+    padding: 30px;
+    overflow:hidden;
+    /* Center text ke liye */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+.card1 img {
+    width: 100% !important;  /* Card ki poori width lega */
+    height: 220px !important; /* Sabhi cards ki image ki height same rahegi taaki slider up-down na ho */
+    object-fit: cover !important; /* Image ko bina pitchkaye (stretch kiye) smartly crop kar dega */
+    object-position: center top !important; /* Face hamesha focus me rahega */
+    border-radius: 8px; /* Image ke corners ko thoda smooth karne ke liye */
+    margin-bottom: 15px; /* Image aur text ke beech space */
+    display: block;
+}
+.card1 h2 {
+    margin-top: 15px;
+    color: var(--text-main);
+}
+.card1 p {
+    color: var(--text-muted);
+}
+.side-image {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+/* =========================================
+   10. QUIZ SECTION
+========================================= */
 .quiz-section {
     padding: 80px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     opacity: 0;
     filter: blur(12px);
     transform: translateY(40px) scale(0.95);
     transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 .quiz-section.show-on-scroll {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0) scale(1);
 }
+
 .quiz-header h2 {
     color: var(--neon-green);
     font-size: 32px;
@@ -447,6 +876,7 @@ body {
     text-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
     font-weight: 700;
 }
+
 .quiz-card {
     background: rgba(10, 10, 10, 0.8);
     border: 1px solid rgba(57, 255, 20, 0.3);
@@ -457,21 +887,25 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(57, 255, 20, 0.05);
     backdrop-filter: blur(10px);
 }
+
 .question-box {
     margin-bottom: 30px;
     min-height: 60px;
 }
+
 .question-box h3 {
     color: #fff;
     font-size: 24px;
     line-height: 1.5;
-    font-weight:600
+    font-weight: 600;
 }
+
 .options-grid {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
+
 .option-btn {
     background: transparent;
     color: #ddd;
@@ -485,12 +919,14 @@ body {
     transition: all 0.3s ease;
     font-family: 'Space Grotesk', sans-serif;
 }
+
 .option-btn:hover {
     border-color: var(--neon-green);
     box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
     color: #fff;
     padding-left: 32px;
 }
+
 .quiz-footer {
     margin-top: 30px;
     display: flex;
@@ -498,6 +934,7 @@ body {
     align-items: center;
     min-height: 80px;
 }
+
 .troll-box {
     font-size: 16px;
     font-weight: 700;
@@ -505,9 +942,11 @@ body {
     opacity: 0;
     transition: 0.3s;
 }
+
 .troll-box.show {
     opacity: 1;
 }
+
 .next-btn {
     margin-top: 15px;
     background: var(--neon-green);
@@ -522,335 +961,172 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 .next-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px var(--neon-green);
 }
-.hidden {
-    display: none;
-}
+
+.hidden { display: none; }
+
+/* Quiz Validation Classes */
 .wrong-choice {
     border-color: #ff3333 !important;
     color: #ff3333 !important;
     box-shadow: 0 0 15px rgba(255, 51, 51, 0.4) !important;
     animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
 }
+
 .right-choice {
     background-color: rgba(57, 255, 20, 0.1);
     border-color: var(--neon-green) !important;
     color: var(--neon-green) !important;
 }
+
 @keyframes shake {
     10%, 90% { transform: translate3d(-2px, 0, 0); }
     20%, 80% { transform: translate3d(4px, 0, 0); }
     30%, 50%, 70% { transform: translate3d(-8px, 0, 0); }
     40%, 60% { transform: translate3d(8px, 0, 0); } 
 }
-/* -- game section css start from here -- */
-.interactive-game-area {
-    grid-area: game;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+
+/* =========================================
+   11. FACTS & VOLTEN BOTTOM CARDS
+========================================= */
+.voltenfacts { margin-top: 40px; margin-left: 20px; font-size: 15px; color: var(--text-muted); }
+.thegame { margin-left: 20px; color: var(--text-main); font-size: 25px; }
+.secrets { margin-left: 20px; color: var(--neon-green); font-size: 25px; line-height: 0.8; }
+.para { margin-left: 20px; margin-top: 10px; color: var(--text-muted); }
+.curious { margin-left: 20px; margin-top: 30px; color: var(--text-muted); font-size: 15px; }
+.did-you { margin-left: 20px; color: var(--text-main); font-size: 25px; }
+
+.glass-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: min(1100px, 90%);
+    margin: 40px auto 30px;
 }
-.game-intro-card {
-    background: rgba(12, 12, 12, 0.85);
-    border: 1px solid rgba(57, 255, 20, 0.35);
-    border-radius: 20px;
-    padding: clamp(20px, 3vw, 35px);
-    width: 100%;
-    max-width: 460px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(57, 255, 20, 0.12);
+
+.stay { margin-left: 20px; margin-top: 30px; color: rgb(109, 42, 109); }
+.lets-keep { margin-left: 20px; font-size: 30px; color: var(--text-main); }
+.exploring { margin-left: 20px; font-size: 30px; color: var(--neon-green); line-height: 1; margin-bottom: 20px; }
+
+.last-card {
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
-    transition: all 0.35s ease;
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 30px;
+    color: #ffffff;
+    display: flex;
+    gap: 120px;
+    margin: 0 20px 20px;
+    background: radial-gradient(ellipse at 12% 18%, rgba(0, 190, 255, 0.25), transparent 38%),
+                radial-gradient(ellipse at 88% 65%, rgba(0, 105, 160, 0.30), transparent 42%),
+                linear-gradient(135deg, #080B1A 0%, #102747 48%, #087E8B 100%);
+}  
+
+.last-part {
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: var(--text-main);
+    display: flex;
+    gap: 50px;
+    background: radial-gradient(ellipse at 12% 18%, rgba(0, 190, 255, 0.25), transparent 38%),
+                radial-gradient(ellipse at 88% 65%, rgba(0, 105, 160, 0.30), transparent 42%),
+                linear-gradient(135deg, #080B1A 0%, #102747 48%, #087E8B 100%);
 }
-.game-icon-card i {
-    font-size: clamp(20px, 2.2vw, 26px);
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: 0.3s ease;
-    padding: 12px;
-    border-radius: 50%;
-    border: 1px solid transparent;
+
+/* --- MEDIA QUERIES FOR BOTTOM CARDS --- */
+@media (max-width: 900px) {
+    .glass-cards { grid-template-columns: repeat(2, 1fr); }
+    .last-card { flex-direction: column; gap: 40px; }
 }
-.game-intro-card i:hover {
-    transform: translateY(-6px);
-    border-color: var(--neon-green);
-    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.9), 0 0 35px rgba(57, 255, 20, 0.3);
+@media (max-width: 600px) {
+    .glass-cards { grid-template-columns: 1fr; }
+    .last-part { flex-direction: column; gap: 20px; }
 }
-.game-intro-card h2 {
-    color: var(--neon-grreen);
-    font-size: clamp(16px, 1.8vw, 22px);
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-}
-@media (max-width: 850px){
-    .hero-section {
-        grid-template-columns: 1fr;
-        grid-template-areas: "text" "game" "icons";
-        text-align: center;
-        gap: 35px;
-        padding: 30px 20px;
-    }
-    .game-intro-card {
-        max-width: 420px;
-        margin: 0 auto;
-    }
-    .game-icon-card {
-        width: 100%;
-        max-width: 420px;
-        justify-content: space-evenly;
-        padding: 15px 20px;
-    }
-}
-#idleCanvas {
-    width: 100%;
-    height: auto;
-    background: #050505;
-    border: 2px dashed rgba(27, 255, 20, 0.4);
-    border-radius: 12px;
-    display: block;
-}
-.full-game-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(5, 5, 5, 0.95);
-    backdrop-filter: blur(15px);
-    background-color: var(--bg-color);
-    z-index: 99999;
+/* --- third page & animation --- */
+.third-page {
+    position: relative;
+    padding: 80px 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    overflow-x: hidden;
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(40px) scale(0.95);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* JS jab scroll trigger karega tab ye class add hogi */
+.third-page.show-on-scroll {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+}
+
+/* --- HEADINGS STYLING --- */
+.talent-text, .character {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.talent-text h3 {
+    color: var(--neon-green);
+    font-size: clamp(32px, 5vw, 50px);
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.character h3 {
+    color: var(--text-main);
+    font-size: clamp(32px, 5vw, 50px);
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.side-image {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 700px;  
+    display: flex;
     justify-content: center;
     align-items: center;
+}
 
+.side-image img {
+    width: 100%;  
+    height: auto; 
+    object-fit: cover;
+    border: 2px solid rgba(57, 255, 20, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 20px rgba(57, 255, 20, 0.1);
 }
-.hidden-game {
-    display: none !important;
-}
-.score-board {
-    position: absolute;
-    top: 30px;
-    font-size: 40px;
-    color: var(--neon-green);
-    font-weight: 900;
-    letter-spacing: 5px;
-    text-shadow: 0 0 20px rgba(57, 255, 20, 0.8);
-}
-#activeGameCanvas {
-    border: 2px solid var(--neon-green);
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(57, 255, 20, 0.2);
-    background-color: #050505;
-    cursor: none;
-    width:100%;
-    max-width:800px;
-    aspect-ratio: 8/5;
-}
-.exit-btn {
-     margin-top: 25px;
-    background: #000;
-    color: #ff3333;
-    border: 2px solid #ff3333;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    z-index: 10000;
-}
-.exit-btn:hover { 
-    background: #ff3333;
-    color: #000;
-    box-shadow: 0 0 20px #ff3333;
-}
-.hide-ui{
-    display: none !important;
-}
-.back-btn {
-    position: absolute;
-    top: 25px;
-    left: 30px;
-    color: var(--neon-red);
-    font-size: 35px;
-    cursor: pointer;
-    z-index: 10001;
-    transition: 0.3s ease;
-    font-weight: bold;
-}
-.back-btn:hover {
-    color: var(--text-main);
-    text-shadow: 0 0 15px var(--neon-red);
-    transform: scale(1.2);
-}
-.game-over-modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(5, 5, 5, 0.95);
-    border: 2px solid var(--neon-green);
-    border-radius: 15px;
-    padding: 40px;
-    text-align:center;
-    box-shadow: 0 0 40px rgba(57, 255, 20, 0.3);
-    z-index: 10002;
-    backdrop-filter: blur(15px);
-}
-.game-over-modal h2 {
-    font-size: 35px;
-    margin-bottom: 30px;
-    color: #fff;
-    text-shadow: 0 0 15px var(--neon-green);
-    letter-spacing: 2px;
-}
-.modal-btn {
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    border: 2px solid;
-    background: transparent;
-    letter-spacing: 1px;
-}
-.modal-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-.restart-btn {
-    background: var(--neon-green);
-    color: #000;
-    box-shadow: 0 0 20px var(--neon-green);
-}
-.restart-btn:hover {
-    color: var(--neon-green);
-    border-color: var(--neon-green);
-}
-.exit-modal-btn {
-    color: var(--neon-red);
-    border-color: var(--neon-red);
-}
-.exit-modal-btn:hover {
-    background: var(--neon-red);
-    color: #000;
-    box-shadow: 0 0 20px var(--neon-red);
-}
-/* --game section css ends here --*/
+@media (max-width: 600px) {
+    .nav-right-controls {
+        display: flex !important;
+        align-items: center;
+        gap: 15px !important;
+        position: relative;
+    }
+    
+    .theme-switch {
+        margin-left: 0 !important;  
+        transform: scale(0.85); 
+    }
 
-.voltenfacts{
-    margin-top:40px;
-    margin-left:20px;
-    font-size:15px;
-    color: var(--text-muted);
-}
-.thegame{
-    margin-left:20px;
-    color: var(--text-main);
-    font-size:25px;
-}
-.secrets{
-    margin-left:20px;
-    color:var(--neon-green);
-    font-size:25px;
-    line-height:0.8;
-}
-.para{
-    margin-left:20px;
-    margin-top:10px;
-    color:var(--text-muted);
-}
-.curious{
-    margin-left:20px;
-    margin-top:30px;
-    color:var(--text-muted);
-    font-size:15px;
-}
-.did-you{
-    margin-left:20px;
-    color:var(--text-main);
-    font-size:25px;
-}
-.glass-cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    width: min(1100px, 90%);
-    margin: 40px auto 0;
-    height:auto;
-    margin-bottom:30px;
-}
-.facts-card{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-    border:1px solid rgba(255, 255, 255, 0.15);
-    box-shadow:0 4px 30px rgba(0, 0, 0, 0.3);
-    border-radius:16px;
-    padding:30px;
-    color:#ffffff;
-    min-height:100%;
-    height:auto;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-}
-.stay{
-    margin-left:20px;
-    margin-top:30px;
-    color:rgb(109, 42, 109)
-}
-.lets-keep{
-    margin-left:20px;
-    font-size:30px;
-    color:var(--text-main);
-}
-.exploring{
-    margin-left:20px;
-    font-size:30px;
-    color:var(--neon-green);
-    line-height:1;
-    margin-bottom:20px;
-}
-.last-card{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-    border:1px solid rgba(255, 255, 255, 0.15);
-    box-shadow:0 4px 30px rgba(0, 0, 0, 0.3);
-    border-radius:16px;
-    padding:30px;
-    color:#ffffff;
-    min-height:100%;
-    height:auto;
-    width:100%;
-    display:flex;
-    gap:120px;
-    margin-bottom:20px;
-     background: radial-gradient(ellipse at 12% 18%, rgba(0, 190, 255, 0.25), transparent 38%),
-    radial-gradient(ellipse at 88% 65%, rgba(0, 105, 160, 0.30), transparent 42% ),
-    linear-gradient(135deg, #080B1A 0%, #102747 48%, #087E8B 100%);
-}  
-.last-part{
-    margin-left:20px;
-    font-size:20px;
-    margin-top:20px;
-    color:var(--text-main);
-    display:flex;
-     gap:50px;
-     margin-bottom:50px;
-      background: radial-gradient(ellipse at 12% 18%, rgba(0, 190, 255, 0.25), transparent 38%),
-    radial-gradient(ellipse at 88% 65%, rgba(0, 105, 160, 0.30), transparent 42% ),
-    linear-gradient(135deg, #080B1A 0%, #102747 48%, #087E8B 100%);
+    .mobile-menu-btn {
+        position: relative !important;  
+        right: 0 !important;  
+        top: 0 !important;
+        display: flex;
+    }
 }
