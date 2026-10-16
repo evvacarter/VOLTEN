@@ -60,5 +60,5 @@ This project features imagery of legendary tennis athletes to enhance the visual
 *    Copyright Notice:  I do not claim ownership of these images. They are the intellectual property of their respective original photographers, sports agencies, or copyright holders. 
 *    Fair Use:  This project is strictly for **educational, non-commercial, and portfolio purposes**. If you are the copyright holder of any image used and would like it credited differently or removed, please open an issue in this repository.
 
----
-*Made for tennis lovers ❤️ by [Your Name/Alias]*
+ 
+Made for tennis lovers ❤️ by evva carter
