@@ -1,6 +1,4 @@
-/* 
-   1. ROOT VARIABLES & GLOBAL RESET
- */
+/*  1. ROOT VARIABLES & GLOBAL RESET*/
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
 
 [data-theme="light"] {
@@ -15,11 +13,9 @@
 
 /* 2. GLOBAL BODY & BACKGROUND */
 body[data-theme="light"]  {
-    /* Smooth white-to-green gradient mixing */
-    background: radial-gradient(ellipse at 75% 20%, rgba(57, 255, 20, 0.08) 0%, transparent 40%),
-                radial-gradient(ellipse at 15% 85%, rgba(0, 100, 45, 0.1) 0%, transparent 50%),
-                linear-gradient(135deg, #FFFFFF 0%, #F5FBF6 40%, #EAF5EB 70%, #FFFFFF 100%) !important;
-    background-color: var(--bg-color) !important;
+     background-color: #F8FDF9 !important; 
+    background-image: radial-gradient(rgba(0, 200, 43, 0.15) 3px, transparent 3px) !important;
+    background-size: 40px 40px !important;
 }
 
  
@@ -65,7 +61,7 @@ body[data-theme="light"]  {
 /* 5. NAVBAR STYLING */
 [data-theme="light"] .navbar {
     background: linear-gradient(135deg, rgba(16, 229, 59, 0.85) 0%, rgba(0, 200, 43, 0.9) 50%, rgba(2, 90, 18, 0.95) 100%) !important;
-    backdrop-filter: blur(12px) !important; /* Sheeshe jaisa blur effect */
+    backdrop-filter: blur(12px) !important;  
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
     box-shadow: 0 10px 30px rgba(0, 200, 43, 0.4) !important;
@@ -126,12 +122,38 @@ body[data-theme="light"] .navbaricons p {
     border: 2.5px solid var(--neon-green);
     box-shadow: 0 12px 35px rgba(0, 80, 15, 0.12);
 }
+body[data-theme="light"] h1, 
+body[data-theme="light"] h2, 
+body[data-theme="light"] h3 {
+    font-family: 'Audiowide', cursive !important;
+    letter-spacing: 2px !important;
+}
+body[data-theme="light"] p,
+body[data-theme="light"] span,
+body[data-theme="light"] .paragraph p {
+    font-family: 'Caveat', cursive !important;
+    font-size: 26px !important;  
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.4 !important;
+}
+body[data-theme="light"] .hero, 
+body[data-theme="light"] .hero-section,
+body[data-theme="light"] .second-page,
+body[data-theme="light"] .third-page {
+    background: transparent !important;
+    background-image: none !important;  
+}
+
+body[data-theme="light"] .hero::before {
+    display: none !important;
+}
 :root {
     --bg-color: #000000;
     --neon-green: #39ff14;
     --text-main: #ffffff;
     --text-muted: #aaaaaa;
-    --neon-red: #ff3333; /* Modal aur buttons ke liye add kiya */
+    --neon-red: #ff3333;  
 }
 
 * {
@@ -143,13 +165,33 @@ body[data-theme="light"] .navbaricons p {
 
 /*  2. BODY & BACKGROUND ANIMATIONS */
 body {
-    background: radial-gradient(ellipse at 75% 20%, rgba(0, 255, 65, 0.12) 0%, transparent 35%),
-                radial-gradient(ellipse at 15% 85%, rgba(0, 100, 45, 0.14) 0%, transparent 40%),
-                linear-gradient(125deg, #020403 0%, #06140B 35%, #092515 65%, #010302 100%);
     background-color: #020403;
-    overflow-x: hidden;  
+    
+    background-image: 
+        /* 1. Nayi Subtle Neon Green Grid Lines */
+        linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+        radial-gradient(ellipse at 75% 20%, rgba(0, 255, 65, 0.12) 0%, transparent 35%),
+        radial-gradient(ellipse at 15% 85%, rgba(0, 100, 45, 0.14) 0%, transparent 40%),
+        
+        /* 3. Base dark gradient */
+        linear-gradient(125deg, #020403 0%, #06140B 35%, #092515 65%, #010302 100%);  
+    /* Grid ka size 50px rakha hai, aur baaki gradients poore screen par (100%) */
+    background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%, 100% 100%;
+    background-attachment: fixed; 
+}
+h1, h2, h3 {
+    font-family: 'Audiowide', system-ui, sans-serif !important;
+    letter-spacing: 2px !important;
 }
 
+p, span, .paragraph p {
+    font-family: 'Caveat', system-ui, sans-serif !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.4 !important;
+}
 /*   3. NAVIGATION BAR  */
 .navbar {
      height: 65px !important;  
@@ -308,10 +350,7 @@ input:checked + .slider:before {
 .icon-moon { color: #f1c40f; font-size: 14px; z-index: 1; }
 
 
-/* =========================================
-   100% BULLETPROOF LIGHT THEME TEXT FIX
-========================================= */
-/* Agar koi bhi text default white set hai, toh light mode me wo dark ho jayega */
+/* 100% BULLETPROOF LIGHT THEME TEXT FIX */
 [data-theme="light"] .third-page p,
 [data-theme="light"] .third-page h2,
 [data-theme="light"] .facts-section p,
@@ -321,7 +360,7 @@ input:checked + .slider:before {
 [data-theme="light"] .quiz-section p,
 [data-theme="light"] .card1 p,
 [data-theme="light"] .card1 h2 {
-    color: #121614 !important; /* Pure dark charcoal for readability */
+    color: #121614 !important;  
 }
 
 /* Specific items jo hamesha green rehne chahiye */
@@ -435,9 +474,7 @@ input:checked + .slider:before {
     transform: translateY(-6px) scale(1.1);
     box-shadow: 0 0 20px var(--neon-green);
 }
-/* =========================================
-   6. HERO INTERACTIVE GAME AREA (Right Side)
-========================================= */
+/*  6. HERO INTERACTIVE GAME AREA   */
 .interactive-game-area {
     grid-area: game;
     display: flex;
@@ -467,7 +504,7 @@ input:checked + .slider:before {
     box-shadow: 0 24px 40px rgba(0, 0, 0, 0.9), 0 0 35px rgba(57, 255, 20, 0.3);
 }
 
-/* BUG FIX: --neon-grreen typo fixed */
+/* BUG FIX: guys its works */
 .game-intro-card h2 {
     color: var(--neon-green);
     font-size: clamp(16px, 1.8vw, 22px);
@@ -631,9 +668,7 @@ input:checked + .slider:before {
     display: none !important;
 }
 
-/* =========================================
-   8. THE LEGENDS SECTION (Second Page)
-========================================= */
+/*  8. THE LEGENDS SECTION (Second Page) */
 .second-page {
     position: relative;
     display: grid;
@@ -677,7 +712,6 @@ input:checked + .slider:before {
 .below-text { grid-area: sub; color: var(--text-muted); font-size: 18px; margin: 0; z-index: 2; letter-spacing: 1px;}
 .legend-text { grid-area: desc; color: var(--text-main); font-size: 18px; line-height: 1.6; margin: 0; z-index: 2; }
 
-/* BUG FIX: explore-btn aur explore-icon ki CSS merge karke ek clear button banaya */
 .explore-btn {
     grid-area: btn;
     position: relative;
@@ -737,9 +771,7 @@ input:checked + .slider:before {
     margin: 40px auto 0;
     height:350px;
 }
-/* =========================================
-   9. LEGENDS IMAGE FIX & CHARACTER CARDS
-========================================= */
+/*  9. LEGENDS IMAGE & CHARACTER CARDS */
 .swiper {
     width: 100%;
     max-width: 1200px;
@@ -752,13 +784,11 @@ input:checked + .slider:before {
 }
 /* har ek card ko width and setup guys */
 .swiper-slide {
-    width: 300px; /* Card ki motai */
+    width: 300px; 
     height: 400px; 
     display: flex;
     justify-content: center;
     align-items: stretch;
-    
-    /* DEFAULT STATE (Side Cards): Blurred aur thode dark rahenge */
     filter: blur(6px) brightness(0.5);
     transition: filter 0.5s ease, transform 0.5s ease;
     transition-timing-function: linear !important;
@@ -775,8 +805,9 @@ input:checked + .slider:before {
 }
 @media (max-width: 768px) {
     .swiper-slide {
-        width: 220px; /* Mobile par width kam ki taaki 3 cards (1 full, 2 half) dikh sakein */
+        width: 220px;  
         height: 320px;
+        filter: blur(0px) brightness(1) !important;
     }
 }
 .main-image {
@@ -787,35 +818,31 @@ input:checked + .slider:before {
     max-width: 500px;
     justify-self: center;
 }
-
-/* Yahan hai unequal images ka FIX */
+/* Yahan hai unequal images ko thik kar diya h guys  */
 .main-image img {
-    width: 100%;
-    aspect-ratio: 4/5; /* Sabhi images ko ek uniform vertical box me set karega */
-    object-fit: cover; /* Image bina stretch hue box bhar legi */
-    object-position: top center; /* Face humesha focus me rahega */
-    display: block;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    /* Agar sharp corners chahiye to border-radius mat lagana */
+    width: 90% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;  
+    object-fit: cover !important;   
+    object-position: top center !important;
+    margin: 10px auto !important;
+    display: block !important;
+    border-radius: 12px !important;
 }
-
 .legends-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     width: min(1100px, 90%);
     margin: 40px auto 0;
-    /* height: 350px; (Fixed height hata di taaki text badhne par overflow na ho) */
 }
-
-/* Glassmorphism Card (Used for Legends & Facts) */
+/* Glassmorphism Card guys  */
 .card1, .facts-card {
-    background: rgba(255, 255, 255, 0.03) !important; /* Ekdum halka transparent white */
+    background: rgba(255, 255, 255, 0.03) !important;  
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Halka sa chamakta border */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important; /* Soft shadow */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;  
     border-radius: 16px;
     padding: 30px;
     overflow:hidden;
@@ -826,12 +853,12 @@ input:checked + .slider:before {
     text-align: center;
 }
 .card1 img {
-    width: 100% !important;  /* Card ki poori width lega */
-    height: 220px !important; /* Sabhi cards ki image ki height same rahegi taaki slider up-down na ho */
-    object-fit: cover !important; /* Image ko bina pitchkaye (stretch kiye) smartly crop kar dega */
-    object-position: center top !important; /* Face hamesha focus me rahega */
-    border-radius: 8px; /* Image ke corners ko thoda smooth karne ke liye */
-    margin-bottom: 15px; /* Image aur text ke beech space */
+    width: 100% !important;  
+    height: 220px !important;  
+    object-fit: cover !important;  
+    object-position: center top !important;  
+    border-radius: 8px;  
+    margin-bottom: 15px;  
     display: block;
 }
 .card1 h2 {
@@ -845,10 +872,7 @@ input:checked + .slider:before {
     margin-top: 40px;
     margin-left: 20px;
 }
-
-/* =========================================
-   10. QUIZ SECTION
-========================================= */
+/* 10. QUIZ SECTION */
 .quiz-section {
     padding: 80px 20px;
     display: flex;
@@ -1042,7 +1066,7 @@ input:checked + .slider:before {
                 linear-gradient(135deg, #080B1A 0%, #102747 48%, #087E8B 100%);
 }
 
-/* --- MEDIA QUERIES FOR BOTTOM CARDS --- */
+/* --- MEDIA QUERIES FOR BOTTOM CARDS guys  --- */
 @media (max-width: 900px) {
     .glass-cards { grid-template-columns: repeat(2, 1fr); }
     .last-card { flex-direction: column; gap: 40px; }
@@ -1065,7 +1089,6 @@ input:checked + .slider:before {
     transform: translateY(40px) scale(0.95);
     transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
-/* JS jab scroll trigger karega tab ye class add hogi */
 .third-page.show-on-scroll {
     opacity: 1;
     filter: blur(0);
@@ -1101,7 +1124,6 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
 }
-
 .side-image img {
     width: 100%;  
     height: auto; 
@@ -1128,5 +1150,191 @@ input:checked + .slider:before {
         right: 0 !important;  
         top: 0 !important;
         display: flex;
+    }
+}
+/* Parent wrapper se koi bhi purana color clear kiya gya h guys  */
+.footer-page {
+    background: transparent !important;
+}
+/* Quote wala card aur sabse neeche ka section */
+.last-card, 
+.last-part {
+    /* Saste blue ki jagah Premium Dark Glass */
+    background: rgba(10, 15, 12, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    
+    border: 1px solid rgba(57, 255, 20, 0.2) !important;
+    box-shadow: 0 8px 32px rgba(0, 200, 43, 0.15) !important;
+}
+
+.last-card {
+    border-radius: 15px !important;
+    margin: 20px auto !important;
+    width: 90% !important;
+    padding: 20px !important;
+}
+
+.last-part {
+    border-radius: 20px 20px 0 0 !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 1px solid rgba(57, 255, 20, 0.4) !important;
+    padding: 20px !important;
+}
+/* Light mode me footer/cards ka glass color safed ho jayega */
+body[data-theme="light"] .last-card, 
+body[data-theme="light"] .last-part {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(0, 200, 43, 0.3) !important;
+}
+/* Light mode text color updates */
+body[data-theme="light"] .last-card h2,
+body[data-theme="light"] .last-card h3,
+body[data-theme="light"] .last-part h1,
+body[data-theme="light"] .last-part h4,
+body[data-theme="light"] .last-part h6,
+body[data-theme="light"] .stay h3,
+body[data-theme="light"] .lets-keep h2,
+body[data-theme="light"] .exploring h1,
+body[data-theme="light"] .exploring p {
+    color: #121614 !important;
+}
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+@media (max-width: 768px) {
+    .second-page {
+        overflow-x: hidden !important; 
+        width: 100% !important;
+        box-sizing: border-box !important;
+        border: none !important;
+        outline: none !important;
+    }
+    .second-page-text h1 {
+        font-size: clamp(35px, 12vw, 55px) !important; 
+        word-wrap: break-word !important;
+        line-height: 1.1 !important;
+        margin: 0 10px !important;
+        text-align: center !important;
+    }
+    .main-image {
+        border: none !important;
+        outline: none !important;
+        background: transparent !important;
+    }
+    .main-image img {
+        width: 90% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        margin: 10px auto !important;
+        display: block !important;
+        border: none !important;
+    }
+}
+/* --- 1. LIGHT MODE DJOKOVIC BOX   --- */
+body[data-theme="light"] .main-image {
+    background: transparent !important;  
+    box-shadow: none !important;  
+}
+/* --- 2. DARK MODE CARDS GLASSMORPHISM   --- */
+.quiz-card, .card1, .facts-card {
+    background: rgba(10, 20, 15, 0.45) !important; 
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(57, 255, 20, 0.2) !important;
+    box-shadow: 0 8px 32px rgba(0, 200, 43, 0.15) !important;
+}
+body[data-theme="light"] .quiz-card, 
+body[data-theme="light"] .card1, 
+body[data-theme="light"] .facts-card {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(0, 200, 43, 0.3) !important;
+}
+.quiz-card, .card1, .facts-card,
+.quiz-card p, .quiz-card h1, .quiz-card h2, .quiz-card h3,
+.card1 p, .card1 h1, .card1 h2, .card1 h3,
+.facts-card p, .facts-card h1, .facts-card h2, .facts-card h3 {
+    color: #FFFFFF !important;  
+}
+body[data-theme="light"] .quiz-card, 
+body[data-theme="light"] .card1, 
+body[data-theme="light"] .facts-card,
+body[data-theme="light"] .quiz-card p, 
+body[data-theme="light"] .quiz-card h1, 
+body[data-theme="light"] .quiz-card h2, 
+body[data-theme="light"] .quiz-card h3,
+body[data-theme="light"] .card1 p, 
+body[data-theme="light"] .card1 h1, 
+body[data-theme="light"] .card1 h2, 
+body[data-theme="light"] .card1 h3,
+body[data-theme="light"] .facts-card p, 
+body[data-theme="light"] .facts-card h1, 
+body[data-theme="light"] .facts-card h2, 
+body[data-theme="light"] .facts-card h3 {
+    color: #121614 !important; 
+}
+/* --- FOOTER & LAST CARDS RESPONSIVE FIX --- */
+@media (max-width: 768px) {
+    /* 1. Text Fix: "G" neeche girne se rokne ke liye aur size kam karne ke liye */
+    .lets-keep h2 {
+        font-size: clamp(22px, 8vw, 40px) !important;
+        white-space: nowrap !important; /* Ek hi line me lock karega */
+        margin: 5px 0 !important;
+    }
+
+    .exploring h1 {
+        font-size: clamp(25px, 9.5vw, 50px) !important; 
+        white-space: nowrap !important; /* G ko neeche nahi girne dega, bas size chhota karega */
+        letter-spacing: 2px !important;
+        margin: 5px 0 !important;
+    }
+    
+    .exploring p {
+        font-size: 18px !important;
+    } 
+    .last-part {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;    
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 15px !important;              
+        padding: 30px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .volten h1 {
+        font-size: 32px !important;
+        margin: 0 0 5px 0 !important;
+        line-height: 1 !important;
+    }
+
+    .volten h6 {
+        font-size: 14px !important;
+        letter-spacing: 2px !important;
+        margin: 0 !important;
+    }
+    
+    .rights h4 {
+        font-size: 14px !important;
+        margin: 0 !important;
+        opacity: 0.8 !important; 
+    }
+
+    .made p {
+        font-size: 16px !important;
+        margin: 0 !important;
+    }
+    
+    .made i {
+        color: #ff3366 !important;  
     }
 }
