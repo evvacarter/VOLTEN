@@ -16,9 +16,8 @@
    <div class="navbar">
     <h1>VOLTEN</h1>
     <div class="navbaricons">
-        <p>Home</p>
-        <p>GAME</p>
-        <p>Iconic players</p>
+        <p style="cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Home</p>
+        <p style="cursor: pointer;" onclick="document.getElementById('gameArea').scrollIntoView({behavior: 'smooth'});">GAME</p>
     </div>
         <!--slider code is here guys -->
          <div class="nav-right-controls" style="display: flex; align-items: center; gap: 15px;">
@@ -38,9 +37,8 @@
 </div>
 <div class="mobile-overlay" id="mobileOverlay">
         <div class="overlay-links">
-            <p>HOME</p>
-            <p>GAME</p>
-            <p>Iconic players</p>
+            <p style="cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">HOME</p>
+            <p style="cursor: pointer;" onclick="document.getElementById('gameArea').scrollIntoView({behavior: 'smooth'});">GAME</p>
             <label class="theme-switch" for="switch-mobile">
                 <input type="checkbox" id="switch-mobile" class="theme-checkbox">
                 <div class="slider round">
@@ -121,7 +119,7 @@
 <!-- third page code-->
 <div class="third-page">
     
-    <!-- Swiper Main Container (Purane legends-card ki jagah) -->
+    <!-- Swiper Main Container   -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             
@@ -168,7 +166,7 @@
                     <p>USA</p>
                 </div>
             </div>
-            <!--slider ko countinuous chlane ke liye cards ko double karna padegs its important -->
+            <!--slider ko countinuous chlane ke liye cards ko double karna padegs its important to ye mt samjhna ke hour incrase krne ke liye ye kar rahe -->
             <div class="swiper-slide">
                 <div class="card1">
                     <a href="roger.html" target="_blank" rel="noopener noreferrer">
