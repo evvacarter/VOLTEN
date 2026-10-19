@@ -53,4 +53,9 @@ This project shows images of legendary tennis athletes to enhance the visual exp
 *    Source:  Images (in `.webp`, `.avif` formats) were sourced via general web search engines. 
 *    Copyright Notice:  I do not claim ownership of these images.
 
+<<<<<<< HEAD
 Made for tennis lovers by EVVA.
+=======
+ 
+Made for tennis lovers ❤️ by evva carter
+>>>>>>> 51d72fa3c8780db76a25fbeff709b2a62ec5dd23
