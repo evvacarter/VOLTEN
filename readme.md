@@ -1,37 +1,34 @@
 # volten (more then a game )
 
-Welcome to **VOLTEN**, an immersive, tennis-themed web experience that goes beyond just reading about the sport.  
+Welcome to **VOLTEN**, it's a website for the tennis lovers and include a game with cool graphics and features .
 
 # Project Overview
 
-VOLTEN is built for tennis lovers and web development fans alike. The project showcases cool front-end techniques, including custom responsive media queries, dark/light theme toggling, and dynamic HTML5 Canvas rendering. 
+VOLTEN is built by using html for all it's layout and text, css for adding a premium look and all the colorfull designs and it also uses java sript for creating the tennis game to inhence the beauty of my website.
 
 #   Key Features
 
-*  Interactive Mini-Game: A custom-built, playable HTML5 Canvas tennis game featuring responsive touch/mouse controls, dynamic ball acceleration, and an adaptive AI bot.
+1) Interactive Mini-Game: It contain a interactive game with two players where the player have to move the slab according to the movement of the ball.
 
-*  Adaptive Theme Engine:  Seamless Light and Dark mode toggling that dynamically adjusts the UI, text colors, and glassmorphism transparency.
+2)  Theme of your choice: The user can change the theme or color of the website as they want in the dark or in the light mode.
 
-*   Premium Glassmorphism UI:  Modern, translucent card designs utilizing `backdrop-filter` for a sleek, frosted-glass look that adapts to both themes.
-  Fully Responsive Design:  Optimized for all devices. From desktop ultrawides to mobile screens, the layout (including the custom footer and game canvas) scales perfectly.
- .
+3)   Premium Glassy feature: A glass look is given to the cards with help of backdrop filter option in the code to increase the look of the page and so, it will look transparent so that the background would be visible.
 
-##   Tech Stack
+4) Fully Responsive Design: You can see VOLTEN whether in your mobile phone or in the desktop sreen as it's fully responsive to both the screen by using media queries my code.
+
+## Languages used-
 
 *   **Markup & Styling:** HTML5, CSS3 (Flexbox, CSS Grid, Custom Variables, Media Queries)
-*   **Logic & Interactivity:** Vanilla JavaScript (ES6+), HTML5 `<canvas>`, `requestAnimationFrame`
+*   **Logic & Interactivity:** Vanilla JavaScript (ES6+), HTML5 canvas, requestAnimationFrame
 *   **Libraries:** [Swiper.js](https://swiperjs.com/) (for slider mechanics), FontAwesome (Icons), Google Fonts (Audiowide, Caveat)
 
-##  Installation & Setup Guide
+## Setup Guide
 
-Getting VOLTEN running on your local machine is very easy
-
-### Prerequisites
- you just need your laptop and any browser install on it and any code editor like vs code to run this code 
+Getting VOLTEN running on your local machine is very easy-
 
 ### Steps to Run
 1.  **Clone the Repository:**
-    Open your terminal and run the following command to clone the project to your local machine:
+    Type this on cmd -
     ```bash
     git clone https://github.com/evvacarter/VOLTEN.git
     ```
@@ -39,26 +36,21 @@ Getting VOLTEN running on your local machine is very easy
     ```bash
     cd VOLTEN
     ```
-3.  **Launch the Project:**
 
-    *   *Method :* Simply double-click the `index.html` file in your file explorer to open it directly in your browser.
-
-## File Structure Highlights
-The project is modularized for clean architecture:
-*   `index.html` - The main entry point and landing page.
-*   `script.js` - Contains the logic for the game loop, bot AI, and theme toggling.
-*   `style.css` - Global styles, glassmorphism rules, and responsive media queries.
+## File Structure
+The project follows a clean structure as follows:
+*   `index.html` - The main file of this webiste for creating this whole structure.
+*   `script.js` - Contains the logic for the game loop, and theme toggling.
+*   `style.css` - Styling, adding cards, colorful look, and responsive media queries.
 *   `style1.css` to `style4.css` - Dedicated stylesheets for individual player pages.
 *   `[player_name].html` - Detailed pages for each athlete.
 
-##  Image Credits & Fair Use Disclaimer
+##  Image Credits
 
-This project features imagery of legendary tennis athletes to enhance the visual experience and pay tribute to the sport. 
+This project shows images of legendary tennis athletes to enhance the visual experience . 
 
 *     Athletes: Novak Djokovic, Rafael Nadal, Roger Federer, and Serena Williams.
 *    Source:  Images (in `.webp`, `.avif` formats) were sourced via general web search engines. 
-*    Copyright Notice:  I do not claim ownership of these images. They are the intellectual property of their respective original photographers, sports agencies, or copyright holders. 
-*    Fair Use:  This project is strictly for **educational, non-commercial, and portfolio purposes**. If you are the copyright holder of any image used and would like it credited differently or removed, please open an issue in this repository.
+*    Copyright Notice:  I do not claim ownership of these images.
 
----
-*Made for tennis lovers ❤️ by [Your Name/Alias]*
+Made for tennis lovers by EVVA.
